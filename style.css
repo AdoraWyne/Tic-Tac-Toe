@@ -2,12 +2,18 @@
     box-sizing: border-box;
 }
 
+body {
+    margin: 20px;
+    background-color: #F2F5C8;
+}
+
 .container{
     margin: 0;
     display: grid;
     grid-template-rows: 1fr auto;
     font-family: 'Dangrek', cursive;
     font-size: 2em;
+    height: 100vh;
 }
 
 main {
@@ -15,9 +21,9 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
     background-color: #B4CFB0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .gameboard-container {
@@ -40,6 +46,8 @@ footer {
     font-size: 0.5em;
     background-color: #94B49F;
     text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 footer > h2, footer > ul {
