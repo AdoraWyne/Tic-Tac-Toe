@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    font-family: 'Dangrek', cursive;
+    font-size: 2em;
+}
+
+main {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #B4CFB0;
+}
+
+.gameboard-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 5px;
+}
+
+.gameboard-container > div {
+    border: 1px solid black;
+    border-radius: 20%;
+    /*3 lines of code below are to center the content in each grid cell*/
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+footer {
+    font-size: 0.5em;
+    background-color: #94B49F;
+    text-align: center;
+}
+
+footer > h2, footer > ul {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+a{
+    text-decoration: none;
+    margin: 10px;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+    object-fit: cover;
+}
+
+button {
+    background-color: #94B49F;
+    margin: 50px;
+    font-size: 0.6em;
+    border-radius: 10px;
+    font-family: 'Dangrek', cursive;
+}
+button:hover {
+    background-color: #F2F5C8;
+}
+
+.cell:hover {
+    background-color: #F2F5C8;
+}
