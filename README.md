@@ -15,3 +15,9 @@ gameboard-container > div {
     justify-items: center;
     align-items: center;
     }
+2. Added HTML Favicon
+
+### Credit:
+Leaf Icon: https://icons8.com/icons/set/leaf
+Sounds:
+Icon:

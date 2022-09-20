@@ -5,15 +5,15 @@
 body {
     margin: 20px;
     background-color: #F2F5C8;
+    font-family: 'Dangrek', cursive;
+    font-size: 2rem;
 }
 
 .container{
     margin: 0;
     display: grid;
     grid-template-rows: 1fr auto;
-    font-family: 'Dangrek', cursive;
-    font-size: 2em;
-    height: 100vh;
+    height: 96.5vh; /*100vh was causing the tiny scroll*/
 }
 
 main {
@@ -80,4 +80,21 @@ button:hover {
 
 .cell:hover {
     background-color: #F2F5C8;
+}
+
+/* Displaying Winning Msg section */
+/* I want the winning msg overlay the whole viewport, thought position:absolute will help as relative to <body> */
+
+.result-msg {
+    display: none;
+}
+.winning-msg {
+    position: absolute;
+    top: 2%;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(195, 255, 153, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
