@@ -1,19 +1,26 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 20px;
+    /* margin: 20px; */
     background-color: #F2F5C8;
     font-family: 'Dangrek', cursive;
     font-size: 2rem;
+    /*center the body's children*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container{
-    margin: 0;
     display: grid;
     grid-template-rows: 1fr auto;
-    height: 96.5vh; /*100vh was causing the tiny scroll*/
+    height: 95vh; /*100vh was causing the tiny scroll*/
+    width: 95vw;
 }
 
 main {
@@ -51,8 +58,6 @@ footer {
 }
 
 footer > h2, footer > ul {
-    margin: 0;
-    padding: 0;
     margin-bottom: 20px;
 }
 
@@ -64,37 +69,36 @@ a{
 img {
     height: 30px;
     width: 30px;
-    object-fit: cover;
 }
 
 button {
     background-color: #94B49F;
     margin: 50px;
+    padding: 5px;
     font-size: 0.6em;
     border-radius: 10px;
     font-family: 'Dangrek', cursive;
 }
-button:hover {
-    background-color: #F2F5C8;
-}
-
+button:hover,
 .cell:hover {
     background-color: #F2F5C8;
 }
 
-/* Displaying Winning Msg section */
-/* I want the winning msg overlay the whole viewport, thought position:absolute will help as relative to <body> */
-
-.result-msg {
-    display: none;
+.displayCurrentPlayer {
+    font-size: 25px;
 }
+/* Displaying Winning Msg section */
 .winning-msg {
-    position: absolute;
-    top: 2%;
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
+    /* margin: 0; */
     background-color: rgb(195, 255, 153, 0.8);
+    font-size: 3rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
