@@ -1,6 +1,6 @@
 const cells = document.querySelectorAll(".cell");
 
-//How to stop once I clicked?
+//Iterating each cell when click event happens, only run playerSwitch func & letsPlay func when the cell is empty
 cells.forEach((cell)=>{
     cell.addEventListener("click", () => {
         if (cell.classList.contains("circle") === false && cell.classList.contains("cross") === false)
@@ -70,6 +70,7 @@ const playerOScore = document.querySelector(".playerOScore")
 let Xscore = 0;
 let Oscore = 0;
 
+//To play the game: what happens when win or draw?
 const letsPlay= () => {
     //Draw
     if (playerX.length === 5 && playerO.length === 4) {
