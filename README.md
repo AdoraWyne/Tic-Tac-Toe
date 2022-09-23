@@ -1,4 +1,8 @@
 # Tic Tac Toe
+Building this classic Tic Tac Toe game as my first personal project.
+You may access the game at [here](https://adorawyne.github.io/tictactoe/).
+
+## You may access the game at https://adorawyne.github.io/tictactoe/
 
 1. Set up the basic HTML of the website -> only did HTML part
 

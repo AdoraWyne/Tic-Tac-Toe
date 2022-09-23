@@ -13,9 +13,20 @@
 </head>
 <body>
     <div class="container">
-
         <main>
             <h1>Tic Tac Toe</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>player X's score</th>
+                        <th>player O's score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td class="playerXScore">0</td>
+                    <td class="playerOScore">0</td>
+                </tbody>
+            </table>
             <p class="displayCurrentPlayer">player X Starts First</p>
             <div class="gameboard-container">
                 <div class="cell"></div>
@@ -28,21 +39,22 @@
                 <div class="cell"></div>
                 <div class="cell"></div>
             </div>
-            <!-- Displaying winning msg section -->
-            <div class="result-msg">
-            </div>
+            <!-- Displaying winning msg & play-again button section -->
+            <div class="result-msg"></div>
+            <!-- Restart button section -->
             <button type="button" class="restart">Restart</button>
         </main>
-    
+        <section></section>
         <footer>
             <h2>Follow Us</h2>
-            <ul>
+            <div>
                 <a href="#" target="_blank"><img src="img/fb.icon.png" alt="FB Icon"></a>
                 <a href="#" target="_blank"><img src="img/ig.icon.png" alt="IG Icon"></a>
                 <a href="#" target="_blank"><img src="img/twitter.icon.png" alt="Twitter Icon"></a>
-            </ul>
+            </div>
         </footer>
     </div>
+    
     <script src="script.js"></script>
 </body> 
 </html>

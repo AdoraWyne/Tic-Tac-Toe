@@ -1,104 +1,172 @@
 * {
+    /* Removed the default margin & padding & box model so easy to set/style later*/
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    /* margin: 20px; */
+    /* Basic Styling */
     background-color: #F2F5C8;
     font-family: 'Dangrek', cursive;
     font-size: 2rem;
-    /*center the body's children*/
+    /*Center the body's child: <div class="container">*/
     display: flex;
     justify-content: center;
     align-items: center;
+    flex: 1;
     height: 100vh;
 }
 
 .container{
+    /*To make layout for <main> & <footer> in grid*/
     display: grid;
     grid-template-rows: 1fr auto;
-    height: 95vh; /*100vh was causing the tiny scroll*/
+    /* Without vh&vw, it will only take as much space as the content needed */
+    /* Setting vh&vw, make some whitespace for content */
+    /*100vh was causing the tiny scroll */
+    height: 95vh; 
     width: 95vw;
 }
 
 main {
+    /* To center main's children*/
     display: flex; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* Basic Styling for <main> */
     background-color: #B4CFB0;
+    /* To make top border corner round */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
 .gameboard-container {
+    /* To make 3x3 boxes/ grid items*/
+    width: 310px;
+    height: 310px;
     display: grid;
-    grid-template-columns: repeat(3, 100px);
-    grid-template-rows: repeat(3, 100px);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-gap: 5px;
 }
 
 .gameboard-container > div {
+    /* To make border for 9 cells */
     border: 1px solid black;
     border-radius: 20%;
-    /*3 lines of code below are to center the content in each grid cell*/
+    /*To center the content in grid cell*/
     display: grid;
     justify-items: center;
     align-items: center;
 }
 
 footer {
-    font-size: 0.5em;
+    /* Basic Styling for <footer> */
     background-color: #94B49F;
+    /* To style the words in footer */
+    font-size: 1rem;
     text-align: center;
+    /* To make bottom border corner round */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
 
-footer > h2, footer > ul {
+footer > h2,
+footer > div {
+    /* To layout the chidlren: <h2> & <div>, make it to center vertically within footer */
     margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 a{
+    /* Removed the default anchor styling */
     text-decoration: none;
+    /* Created space between each anchor link */
     margin: 10px;
 }
 
 img {
+    /* Reset the img size so they look relatively balance to footer box */
     height: 30px;
     width: 30px;
 }
 
 button {
+    /* Basic styling for button: Restart & Play Again buttons*/
     background-color: #94B49F;
-    margin: 50px;
-    padding: 5px;
-    font-size: 0.6em;
+    border: none;
     border-radius: 10px;
-    font-family: 'Dangrek', cursive;
+    font-family: inherit;
+    font-size: 0.6em;
+    /* The word's color on phone/Ipad is blue, changed it to black. */
+    color: black;
+    /* Created space between the adjacent element */
+    margin: 50px;
+    /* Created space between the words and border inside the button */
+    padding: 5px;
 }
+
 button:hover,
 .cell:hover {
+    /* Created hover styling for 9 cells and buttons */
     background-color: #F2F5C8;
 }
 
 .displayCurrentPlayer {
+    /* Resized the font-size, the defined as 2rem in <body> is too big */
     font-size: 25px;
 }
-/* Displaying Winning Msg section */
+
+/* Displaying Win/Draw Msg section */
 .winning-msg {
+    /* put fixed position so it can be overlay on other elements in <main> */
+    /* as the element is removed from the normal document flow, and no space is created for the element in the page layout. */
+    /* it is centered in the <main> because main is flexbox */
     position: fixed;
+    /* To make the msg <div> full of the viewport */
+    /* If without the top: 0, the viewport height is started from "position" rather than the beginning of the viewport */
     top: 0;
-    left: 0;
+    left: 0; 
     height: 100vh;
-    width: 100vw;
-    /* margin: 0; */
+    width: 100vw; 
+    /* General Styling */
     background-color: rgb(195, 255, 153, 0.8);
     font-size: 3rem;
+    /* To center the content inside this <div> */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+/* Styling the table */
+table {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+th{
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+th:first-child,
+td:first-child {
+    border-right: 1px solid black;
+}
+
+/* Place cross */
+.cross {
+    background-image: url(img/crossSign.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
+}
+/* Place circle */
+.circle {
+    background-image: url(img/circleSign.png);
+    background-position: center;
+    background-size: 40%;
+    background-repeat: no-repeat;
 }
