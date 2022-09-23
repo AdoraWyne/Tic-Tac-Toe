@@ -51,7 +51,7 @@ Secondly, it would be the Javascript and DOM part. There are some repetitive cod
     7. How to restart the game
     8. Playing the game again while the score board remains the players' score.
 
-### Credit:
+## Credit:
 The project could not have be done without the guidance of Dido and Rod from General Assembly.
 
 Images and Audios are from:
