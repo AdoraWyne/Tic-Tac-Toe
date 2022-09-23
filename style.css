@@ -205,4 +205,8 @@ td:first-child {
         padding: 5px;
     }
 
+    .winning-msg {
+        font-size: 1.5rem;
+    }
+
 }
