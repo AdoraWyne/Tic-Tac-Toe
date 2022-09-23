@@ -17,7 +17,7 @@ Building this classic Tic Tac Toe game as my first personal project.
 4. Hover effect on the game board and buttons.
 5. Social media pages to follow if users want to. However, there's no link provided and when you clicked on the icon, it will direct you back to the game on a new page.
 6. Put a favicon on browser tab.
-7. The game can be played in Ipad or Iphone (smaller screen).
+7. The game can be played in Ipad or Iphone (Responsive to smaller screen).
 
 
 ## Challenges Faced
