@@ -13,7 +13,7 @@ Building this classic Tic Tac Toe game as my first personal project.
 ## Features
 1. Score board to keep track of players' score.
 2. Restart button to restart the game again.
-3. Audio for clicking the game board and when there is a win or draw.
+3. Audio for clicking the game board and when there is a win or draw. The audio can be muted or unmuted.
 4. Hover effect on the game board and buttons.
 5. Social media pages to follow if users want to. However, there's no link provided and when you clicked on the icon, it will direct you back to the game on a new page.
 6. Put a favicon on browser tab.

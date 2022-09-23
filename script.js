@@ -27,7 +27,6 @@ const playerSwitch = (cell) => {
         displayCurrentPlayer.textContent = "player X's Turn";
         currentPlayer ="X";
     }
-    const clickAudio = new Audio("audio/clickSound.mp3");
     clickAudio.play();
 }
 
@@ -69,6 +68,10 @@ const playerXScore = document.querySelector(".playerXScore")
 const playerOScore = document.querySelector(".playerOScore")
 let Xscore = 0;
 let Oscore = 0;
+//All the audio:
+const clickAudio = new Audio("audio/clickSound.mp3");
+const loseAudio = new Audio("audio/losingSound.wav");
+const winAudio = new Audio("audio/winningSound.wav");
 
 //To play the game: what happens when win or draw?
 const letsPlay= () => {
@@ -83,7 +86,6 @@ const letsPlay= () => {
             playAgainButton.textContent = "Let's play again!"
             divResultMsg.appendChild(playAgainButton);
             //Added audio
-            const loseAudio = new Audio("audio/losingSound.wav");
             loseAudio.play();
             return;
         }
@@ -112,7 +114,6 @@ const winGame = (winner) => {
     playAgainButton.textContent = "Let's play again!"
     divResultMsg.appendChild(playAgainButton);
     //Added audio
-    const winAudio = new Audio("audio/winningSound.wav");
     winAudio.play();
 }
 
@@ -134,4 +135,26 @@ playAgainButton.addEventListener("click", () => {
 const restartButton = document.querySelector(".restart");
 restartButton.addEventListener("click", () => {
     document.location.reload();
+})
+
+//To mute & unmute the audio
+const soundOn = document.querySelector(".soundOn");
+let sound = 1;
+soundOn.addEventListener("click", (event) => {
+    if (sound === 1) {
+        soundOn.innerHTML = "<img src='img/mute.png' alt='Mute On'>"
+        soundOn.className = "muteOn"
+        clickAudio.muted = true;
+        loseAudio.muted = true;
+        winAudio.muted = true;
+        sound = 0;
+    } else if (sound === 0) {
+        const muteOn = document.querySelector(".muteOn");
+        muteOn.innerHTML = "<img src='img/sound.png' alt='Sound On'>"
+        muteOn.className = "soundOn"
+        clickAudio.muted = false;
+        loseAudio.muted = false;
+        winAudio.muted = false;
+        sound = 1;
+    }
 })

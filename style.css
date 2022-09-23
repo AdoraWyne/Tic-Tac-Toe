@@ -27,6 +27,7 @@ body {
     /*100vh was causing the tiny scroll */
     height: 95vh; 
     width: 95vw;
+    position: relative;
 }
 
 main {
@@ -154,6 +155,13 @@ th{
 th:first-child,
 td:first-child {
     border-right: 1px solid black;
+}
+
+.soundOn,
+.muteOn {
+    position: absolute;
+    right: 10px;
+    top: 5px;
 }
 
 /* Place cross */
