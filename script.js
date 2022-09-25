@@ -46,6 +46,7 @@ let playerX = [];
 let playerO = [];
 
 //2. Use some(), every() & includes() method to check player's selection against winning condition
+    //if the player's selection contain all the value in one of these winnning condition, then this function will return true.
 const checkPlayerWin = (player) => {
     const win = winningConditions.some((winningCondition)=> {
             return winningCondition.every((winningConditionValue)=>{

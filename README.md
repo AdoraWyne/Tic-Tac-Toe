@@ -12,7 +12,7 @@ Building this classic Tic Tac Toe game as my first personal project.
 
 ## Features
 1. Score board to keep track of players' score.
-2. Restart button to restart the game again.
+2. Reset button to restart the game again.
 3. Audio for clicking the game board and when there is a win or draw. The audio can be muted or unmuted.
 4. Hover effect on the game board and buttons.
 5. Social media pages to follow if users want to. However, there's no link provided and when you clicked on the icon, it will direct you back to the game on a new page.
@@ -25,10 +25,10 @@ The biggest challenges is always the first step: the plan on how to complete the
 
 I did the mockup of the webpage by hand-drawn first. Then targetted HTML, CSS, JS & DOM part by order.
 
-Secondly, it would be the Javascript and DOM part. There are some repetitive code and hope I can modify the code to more DRY when my coding skill is more advanced. 
+Secondly, it would be the Javascript and DOM part, especially the winning condition part and how to combine it with the players' selection. There are also some repetitive code and hope I can modify the code to more DRY when my coding skill is more advanced. 
 
 ## Things I learnt from this project:
-* More familiarise with the implication of HTML, CSS, Javascript and DOM in general.
+* More familiar with the implication of HTML, CSS, Javascript and DOM in general.
 
 ### HTML
 - Used semantic markup like main and footer to separate the main content and footer content.
@@ -50,6 +50,7 @@ Secondly, it would be the Javascript and DOM part. There are some repetitive cod
     6. Displaying winning or drawing message.
     7. How to restart the game
     8. Playing the game again while the score board remains the players' score.
+    9. Setup mute and unmute function.
 
 ## Credit:
 The project could not have be done without the guidance of Dido and Rod from General Assembly.
