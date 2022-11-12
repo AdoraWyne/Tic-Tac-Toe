@@ -1,5 +1,5 @@
 # Tic Tac Toe
-You may access the game at [here](https://adorawyne.github.io/tictactoe/).
+You may access the game at [here](https://adorawyne.github.io/Tic-Tac-Toe/).
 
 ## Project Description
 Building this classic Tic Tac Toe game as my first personal project.
